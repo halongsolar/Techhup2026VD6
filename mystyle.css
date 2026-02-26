@@ -1,0 +1,233 @@
+/* =========================
+   VARIABLES & BASE
+========================= */
+:root {
+  --nav-text: #ffffff; /* Đổi thành #111 nếu bạn thích màu đen */
+  --primary-red: #b91c1c;
+  --hover-red: #991b1b;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   I. NAVBAR & BACKGROUND
+========================= */
+.tech-navbar {
+  background: linear-gradient(90deg, #22c55eb2, #10b981e6, #059669da);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 0.6rem 0;
+}
+
+.navbar-brand img {
+  width: 120px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  /* mix-blend-mode: multiply; Giúp logo nổi bật hơn trên nền gradient */
+}
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+.navbar-light .navbar-nav .nav-link {
+  color: var(--nav-text) !important;
+  font-weight: 600;
+  padding: 0.5rem 0.7rem !important;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Underline animation & Active State */
+.navbar-light .navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-red);
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--primary-red) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after,
+.navbar-light .navbar-nav .nav-link.active::after {
+  width: 70%;
+}
+
+/* =========================
+   BUTTONS & ICONS
+========================= */
+.btn-danger {
+  background: var(--primary-red);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  transition: 0.3s;
+}
+
+.btn-danger:hover {
+  background: var(--hover-red);
+  transform: translateY(-2px);
+}
+
+/* Sửa lỗi Icon bị chìm (ép màu trắng cho SVG) */
+.btn-danger svg path,
+.btn-outline-success svg path {
+  fill: #fff !important;
+}
+
+/* 
+   SEARCH & RESPONSIVE
+ */
+.form-control {
+  border-radius: 6px 0 0 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-success {
+  border-radius: 0 6px 6px 0;
+  background: #10b981;
+  border: none;
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    justify-content: space-between;
+  }
+  .navbar-nav {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+/* =========================
+   II. Main products
+========================= */
+/*   <!--III. Product features --> */
+
+/* =========================
+   IV. Related products
+========================= */
+.feature-item {
+  background: #fff;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-item:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  background-color: rgba(25, 135, 84, 0.06);
+  transform: translateY(-5px); /* Hiệu ứng nổi nhẹ khi hover */
+}
+
+/* Mặc định cho Mobile: Ảnh 100px để tiết kiệm diện tích */
+.feature-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.feature-item h3 {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.feature-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  /* Giới hạn hiển thị chữ nếu quá dài để các card đều nhau */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Xử lý cho màn hình từ 768px trở lên */
+@media (min-width: 768px) {
+  .feature-item img {
+    width: 90px; /* Nhỏ lại một chút trên tablet để text có chỗ thở */
+    height: 90px;
+  }
+}
+
+/* Xử lý cho màn hình lớn (Desktop) */
+@media (min-width: 1200px) {
+  .feature-item img {
+    width: 120px; /* Quay lại cỡ lớn khi màn hình đã đủ rộng */
+    height: 120px;
+  }
+}
+
+/* Hiệu ứng ban đầu cho ảnh chưa tải xong */
+.lazy-load {
+  opacity: 0;
+  transform: scale(0.95);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+/* Class này sẽ được thêm vào bằng JavaScript khi ảnh tải xong */
+.lazy-load.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Giữ lại phần fix ảnh dãn ở câu trước của bạn */
+.feature-item img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  background-color: #f9f9f9; /* Tạo nền nhẹ trong lúc chờ ảnh tải */
+}
+
+@media (max-width: 991px) {
+  .feature-item img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* =========================
+   V. Viewed products
+========================= */
+.badge-outline {
+  border: 1px solid #198754;
+  color: #198754;
+  background: transparent;
+  font-weight: 600;
+}
+
+/* Card viewed product */
+.list-group-item {
+  border-radius: 10px;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.list-group-item:hover {
+  background-color: rgba(25, 135, 84, 0.06);
+  transform: translateY(-2px);
+}
+/* Ảnh sản phẩm */
+.list-group-item img {
+  max-height: 160px;
+  object-fit: contain;
+}
+
+/* Khoảng cách nội dung */
+.list-group-item h5 {
+  font-weight: 600;
+}
+
+.list-group-item p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}

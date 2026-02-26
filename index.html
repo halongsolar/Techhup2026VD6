@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      119. Bootstrap5 - Project Xây Dựng Website Hoàn Chỉnh Từ A-Z Với Bootstrap
+      5 - Dự án Camera, wifi
+    </title>
+    <!-- CSS Boot trap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- my style -->
+    <link rel="stylesheet" href="./mystyle.css" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <!--I. navbar -->
+    <nav class="navbar navbar-expand-lg border-bottom tech-navbar navbar-light">
+      <div class="container">
+        <!-- navbar rand -->
+        <a class="navbar-brand" href="#">
+          <img src="./img/Tech Hup 3.png" alt="logo techHup.aa" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- menu item -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Trang Chủ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"
+                >Lĩnh vực hoạt động</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Sản Phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Dự Án</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Giải Pháp</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"
+                >Tài Liệu Kỹ Thuật</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Liên Hệ</a>
+            </li>
+          </ul>
+
+          <!-- btn dùng thẻ để đăng kí và đăng nhập -->
+          <div
+            class="d-flex flex-column flex-md-row gap-2 me-lg-3 mb-2 mb-lg-0"
+          >
+            <a
+              href="#!"
+              class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center text-nowrap"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                width="16"
+                height="16"
+                class="me-1"
+              >
+                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path
+                  fill="rgba(102, 175, 125, 1.00)"
+                  d="M285.7 368C384.2 368 464 447.8 464 546.3C464 562.7 450.7 576 434.3 576L77.7 576C61.3 576 48 562.7 48 546.3C48 447.8 127.8 368 226.3 368L285.7 368zM528 144C541.3 144 552 154.7 552 168L552 216L600 216C613.3 216 624 226.7 624 240C624 253.3 613.3 264 600 264L552 264L552 312C552 325.3 541.3 336 528 336C514.7 336 504 325.3 504 312L504 264L456 264C442.7 264 432 253.3 432 240C432 226.7 442.7 216 456 216L504 216L504 168C504 154.7 514.7 144 528 144zM256 312C189.7 312 136 258.3 136 192C136 125.7 189.7 72 256 72C322.3 72 376 125.7 376 192C376 258.3 322.3 312 256 312z"
+                />
+              </svg>
+              Tech Hup Rewards
+            </a>
+
+            <a
+              href="#!"
+              class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center text-nowrap"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                width="16"
+                height="16"
+                class="me-1"
+              >
+                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path
+                  fill="rgba(102, 175, 125, 1.00)"
+                  d="M409 337C418.4 327.6 418.4 312.4 409 303.1L265 159C258.1 152.1 247.8 150.1 238.8 153.8C229.8 157.5 224 166.3 224 176L224 256L112 256C85.5 256 64 277.5 64 304L64 336C64 362.5 85.5 384 112 384L224 384L224 464C224 473.7 229.8 482.5 238.8 486.2C247.8 489.9 258.1 487.9 265 481L409 337zM416 480C398.3 480 384 494.3 384 512C384 529.7 398.3 544 416 544L480 544C533 544 576 501 576 448L576 192C576 139 533 96 480 96L416 96C398.3 96 384 110.3 384 128C384 145.7 398.3 160 416 160L480 160C497.7 160 512 174.3 512 192L512 448C512 465.7 497.7 480 480 480L416 480z"
+                />
+              </svg>
+              My Account
+            </a>
+          </div>
+
+          <!-- form search -->
+          <form class="d-flex mt-2 mt-lg-0" role="search">
+            <input
+              class="form-control form-control-sm me-2"
+              type="search"
+              placeholder="Solution Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success btn-sm" type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                width="16"
+              >
+                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path
+                  fill="rgba(102, 175, 125, 1.00)"
+                  d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--II. Main products-->
+    <header class="main-header py-5 border-bottom">
+      <div class="container">
+        <div class="row align-items-center gx-md-5">
+          <!-- Khối bên phải -->
+          <div class="col-md-6">
+            <img class="rounded w-100" src="./img/H9C.jpg" alt="" />
+          </div>
+          <!-- Khối bên trái -->
+          <div class="col-md-6 mt-5 mt-md-0">
+            <h1 class="title-product">Camera H9c 2K (6MP)</h1>
+            <p class="pt-sm-2 fs-5 fw-normal">
+              Camera mắt kép thông minh ngoài trời - Camera kép 2K & 2K - Tự
+              động theo dõi thông minh - Điều khiển một chạm để thay đổi Chế độ
+              xem được liên kết - Hai chế độ tuần tra tự động - Phát hiện hình
+              dạng người/ xe bằng AI - Phát hiện chuyển động - 1 mắt cố định, 1
+              mắt xoay 360° phủ sóng toàn cảnh - Có màu vào ban đêm - Tầm nhìn
+              màu ban đêm 30m, tầm nhìn hồng ngoại ban đêm 30m - Đàm thoại hai
+              chiều - Cảnh báo bằng còi báo động và đèn chớp - Thiết kế chống
+              chịu thời tiết - Ăng-ten Wi-Fi kép được cải tiến - Công nghệ video
+              H.265 - Tích hợp thông minh Google Assistant & Amazon Alexa - Hỗ
+              trợ thẻ MicroSD (lên đến 512 GB) & dịch vụ lưu trữ EZVIZ CloudPlay
+              - Hỗ trợ WiFi + cài đặt WiFi thông minh với phần mềm EZVIZ - quá
+              trình cài đặt chỉ mất vài phút với người lần đầu sử dụng
+            </p>
+            <a
+              href="#!"
+              class="btn btn-success btn-sm d-inline-flex justify-content-center align-items-center text-nowrap"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                width="16"
+                height="16"
+                class="me-1"
+              >
+                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path
+                  fill="rgba(102, 175, 125, 1.00)"
+                  d="M409 337C418.4 327.6 418.4 312.4 409 303.1L265 159C258.1 152.1 247.8 150.1 238.8 153.8C229.8 157.5 224 166.3 224 176L224 256L112 256C85.5 256 64 277.5 64 304L64 336C64 362.5 85.5 384 112 384L224 384L224 464C224 473.7 229.8 482.5 238.8 486.2C247.8 489.9 258.1 487.9 265 481L409 337zM416 480C398.3 480 384 494.3 384 512C384 529.7 398.3 544 416 544L480 544C533 544 576 501 576 448L576 192C576 139 533 96 480 96L416 96C398.3 96 384 110.3 384 128C384 145.7 398.3 160 416 160L480 160C497.7 160 512 174.3 512 192L512 448C512 465.7 497.7 480 480 480L416 480z"
+                />
+              </svg>
+              Tư vấn mua hàng
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--III. Product features 1-->
+    <section class="subcribe py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4 mb-3 text-center text-md-start">
+            <h2 class="fs-4 mb-2">Mở Rộng Tầm Nhìn An Ninh</h2>
+
+            <p class="fs-6 fs-md-5">
+              Theo dõi nhiều hơn, rõ nét từng chuyển động
+            </p>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <img
+              class="img-fluid rounded shadow-sm w-100 img-box"
+              style="aspect-ratio: 1/1; object-fit: cover"
+              src="./img/Ezviz H9C/3K/techhup_image_1.png"
+              alt="#!"
+            />
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <img
+              class="img-fluid rounded shadow-sm w-100 img-box"
+              style="aspect-ratio: 1/1; object-fit: cover"
+              src="./img/Ezviz H9C/3K/techhup_image_2.png"
+              alt="#!"
+            />
+          </div>
+        </div>
+    <!--III. Product features 2-->
+   <section class="subcribe py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- IMAGE -->
+      <div class="col-md-8 col-12 mb-3">
+        <div class="img-wrapper">
+          <img 
+            src="./img/Ezviz H9C/3K/techhup_image_3.png"
+            class="img-fluid w-100 rounded shadow-sm"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- TEXT -->
+      <div class="col-md-4">
+        <h2 class="fs-4 mb-2">Mở Rộng Tầm Nhìn An Ninh</h2>
+        <p class="fs-6 fs-md-5">
+          Theo dõi nhiều hơn, rõ nét từng chuyển động
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <!--IV. Related products -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <!-- item 1 -->
+          <div class="col-md-4 d-flex">
+            <div
+              class="feature-item border rounded p-3 d-flex align-items-start w-100"
+            >
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/H8C-3k.jpeg"
+                  alt="H8C-3k"
+                  loading="lazy"
+                  class="img-fluid lazy-load"
+                />
+              </div>
+              <div class="ms-2">
+                <h3 class="fs-5">Camera Wi-Fi Ezviz H8C 3K</h3>
+                <p class="small text-muted">
+                  EZVIZ H8C Pro 3K (5MP) sở hữu độ phân giải 5MP 3K siêu nét,
+                  tối ưu lưu trữ. Camera tích hợp phát hiện & theo dõi chuyển
+                  động thông minh, cảnh báo bằng còi và đèn chớp, đàm thoại hai
+                  chiều, hỗ trợ thẻ nhớ microSD đến 512GB và chuẩn chống nước
+                  IP65 bền bỉ ngoài trời.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- item 2 -->
+          <div class="col-md-4 d-flex">
+            <div
+              class="feature-item border rounded p-3 d-flex align-items-start w-100 mt-2 mt-md-0"
+            >
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/H80F 4mp Multi2k.jpg"
+                  alt="H8C-3k"
+                  loading="lazy"
+                  class="img-fluid lazy-load"
+                />
+              </div>
+              <div class="ms-2">
+                <h3 class="fs-5">Camera Wi-Fi Ezviz H80F</h3>
+                <p class="small text-muted">
+                  EZVIZ H80F (4MP+4MP+4MP) trang bị hệ thống 3 ống kính 2K sắc
+                  nét, zoom quang 12X rõ chi tiết. Camera tích hợp AI nhận diện
+                  người & phương tiện, hỗ trợ màu ban đêm 24/7, đàm thoại hai
+                  chiều và chuẩn chống nước IP67 bền bỉ ngoài trời.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- item 3 -->
+          <div class="col-md-4 d-flex">
+            <div
+              class="feature-item border rounded p-3 d-flex align-items-start w-100 mt-2 mt-md-0"
+            >
+              <div class="flex-shrink-0">
+                <img
+                  src="./img/Camera pin sạc EZVIZ EB3 4G 2K.jpg"
+                  alt="H8C-3k"
+                  loading="lazy"
+                  class="img-fluid lazy-load"
+                />
+              </div>
+              <div class="ms-2">
+                <h3 class="fs-5">Camera pin sạc EZVIZ EB3 4G 2K</h3>
+                <p class="small text-muted">
+                  EZVIZ EB3 4G 2K sở hữu độ phân giải 2K sắc nét, kết nối SIM 4G
+                  linh hoạt không cần Wi-Fi. Camera trang bị pin 5.200mAh hoạt
+                  động đến 100 ngày, hỗ trợ tấm pin năng lượng mặt trời tiết
+                  kiệm điện, tích hợp AI nhận diện người thông minh, Thiết kế
+                  bền bỉ phù hợp lắp đặt ngoài trời.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- V. Products viewed -->
+    <section class="py-4 border-bottom">
+      <div class="container">
+        <!-- viewed-header -->
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="text-md-center">
+              <h4 class="fs-5">Sản phẩm bạn đã xem</h4>
+              <p class="small text-secondary">
+                Bạn đã từng quan tâm đến những thiết bị này. Đừng bỏ lỡ cơ hội
+                bảo vệ ngôi nhà và cửa hàng của bạn với giải pháp an ninh tối
+                ưu.
+              </p>
+              <a
+                href="#!"
+                class="btn btn-success btn-sm d-inline-flex justify-content-center align-items-center text-nowrap"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                  width="18"
+                  height="18"
+                  class="me-2"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M160 64C124.7 64 96 92.7 96 128L96 512C96 547.3 124.7 576 160 576L448 576C483.3 576 512 547.3 512 512L512 128C512 92.7 483.3 64 448 64L160 64zM272 352L336 352C380.2 352 416 387.8 416 432C416 440.8 408.8 448 400 448L208 448C199.2 448 192 440.8 192 432C192 387.8 227.8 352 272 352zM248 256C248 225.1 273.1 200 304 200C334.9 200 360 225.1 360 256C360 286.9 334.9 312 304 312C273.1 312 248 286.9 248 256z"
+                  />
+                </svg>
+                Xem lại & Mua ngay
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- viewed-products -->
+        <div class="row mt-4">
+          <div class="col-md-3">
+            <div class="list-group small mb-3">
+              <div class="list-group-item text-bg-light fw-bold">
+                Danh mục thiết bị
+              </div>
+              <a
+                class="align-items-center list-group-item d-flex justify-content-between"
+                href="#!"
+                >Thiết bị cao cấp
+                <span class="badge rounded-pill badge-outline">14</span>
+              </a>
+              <a
+                class="align-items-center list-group-item d-flex justify-content-between"
+                href="#!"
+                >Thiết bị bán chạy
+                <span class="badge rounded-pill badge-outline">32</span>
+              </a>
+            </div>
+            <div class="list-group small mb-3 mb-md-0">
+              <div class="list-group-item text-bg-light fw-bold">
+                Theo nhu cầu của bạn
+              </div>
+              <a
+                class="align-items-center list-group-item d-flex justify-content-between"
+                href="#!"
+                >Gia đình và cá nhân
+                <span class="badge rounded-pill badge-outline">14</span>
+              </a>
+              <a
+                class="align-items-center list-group-item d-flex justify-content-between"
+                href="#!"
+                >Cửa hàng và văn phòng
+                <span class="badge rounded-pill badge-outline">32</span>
+              </a>
+              <a
+                class="align-items-center list-group-item d-flex justify-content-between"
+                href="#!"
+                >doanh nghiệp và nhà hàng
+                <span class="badge rounded-pill badge-outline">32</span>
+              </a>
+              <a
+                class="align-items-center list-group-item d-flex justify-content-between"
+                href="#!"
+                >Nhà xưởng, nhà máy và kho hàng
+                <span class="badge rounded-pill badge-outline">32</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="list-group small">
+              <div
+                class="align-items-center list-group-item d-flex justify-content-between text-bg-light fw-bold"
+              >
+                Danh sách thiết bị phù hợp với nhu cầu của bạn
+                <span class="badge rounded-pill badge-outline">5 sản phẩm</span>
+              </div>
+              <!-- Item 1 -->
+              <a href="./single-course.html" class="list-group-item">
+                <div class="row align-items-center">
+                  <div class="col-md-4 col-12">
+                    <div>
+                      <img
+                        src="./img/H80F 4mp Multi2k.jpg"
+                        alt=""
+                        class="rounded img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <h5>Camera Wi-Fi Ezviz H80F</h5>
+                    <p class="text-secondary">
+                      EZVIZ H80F (4MP+4MP+4MP) trang bị hệ thống 3 ống kính 2K
+                      sắc nét, zoom quang 12X rõ chi tiết. Camera tích hợp AI
+                      nhận diện người & phương tiện, hỗ trợ màu ban đêm 24/7,
+                      đàm thoại hai chiều và chuẩn chống nước IP67 bền bỉ ngoài
+                      trời.
+                    </p>
+                    <div class="d-inline-flex align-items-center">
+                      <span
+                        class="px-2 py-1 rounded-pill text-bg-warning me-2 d-inline-flex align-items-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 640 640"
+                          width="16"
+                          height="16"
+                          class="me-1"
+                        >
+                          <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                          <path
+                            fill="rgb(255, 212, 59)"
+                            d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+                          />
+                        </svg>
+                        Đánh giá: <strong>4.7/5</strong></span
+                      >
+
+                      <span class="px-2 py-1 rounded-pill text-bg-success">
+                        Giá: 1.990.000₫
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 2 -->
+              <a href="./single-course.html" class="list-group-item">
+                <div class="row align-items-center">
+                  <div class="col-md-4 col-12">
+                    <div>
+                      <img
+                        src="./img/H8C-3k.jpeg"
+                        alt=""
+                        class="rounded img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <h5>Camera Wi-Fi Ezviz H8C 3K</h5>
+                    <p class="text-secondary">
+                      EZVIZ H8C Pro 3K (5MP) sở hữu độ phân giải 5MP 3K siêu
+                      nét, tối ưu lưu trữ. Camera tích hợp phát hiện & theo dõi
+                      chuyển động thông minh, cảnh báo bằng còi và đèn chớp, đàm
+                      thoại hai chiều, hỗ trợ thẻ nhớ microSD đến 512GB và chuẩn
+                      chống nước IP65 bền bỉ ngoài trời.
+                    </p>
+                    <div class="d-inline-flex align-items-center">
+                      <span
+                        class="px-2 py-1 rounded-pill text-bg-warning me-2 d-inline-flex align-items-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 640 640"
+                          width="16"
+                          height="16"
+                          class="me-1"
+                        >
+                          <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                          <path
+                            fill="rgb(255, 212, 59)"
+                            d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+                          />
+                        </svg>
+                        Đánh giá: <strong>4.7/5</strong></span
+                      >
+
+                      <span class="px-2 py-1 rounded-pill text-bg-success">
+                        Giá: 1.990.000₫
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 3 -->
+              <a href="./single-course.html" class="list-group-item">
+                <div class="row align-items-center">
+                  <div class="col-md-4 col-12">
+                    <div>
+                      <img
+                        src="./img/Camera pin sạc EZVIZ EB3 4G 2K.jpg"
+                        alt=""
+                        class="rounded img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <h5>Camera pin sạc EZVIZ EB3 4G 2K</h5>
+                    <p class="text-secondary">
+                      EZVIZ EB3 4G 2K sở hữu độ phân giải 2K sắc nét, kết nối
+                      SIM 4G linh hoạt không cần Wi-Fi. Camera trang bị pin
+                      5.200mAh hoạt động đến 100 ngày, hỗ trợ tấm pin năng lượng
+                      mặt trời tiết kiệm điện, tích hợp AI nhận diện người thông
+                      minh, Thiết kế bền bỉ phù hợp lắp đặt ngoài trời.
+                    </p>
+                    <div class="d-inline-flex align-items-center">
+                      <span
+                        class="px-2 py-1 rounded-pill text-bg-warning me-2 d-inline-flex align-items-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 640 640"
+                          width="16"
+                          height="16"
+                          class="me-1"
+                        >
+                          <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                          <path
+                            fill="rgb(255, 212, 59)"
+                            d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+                          />
+                        </svg>
+                        Đánh giá: <strong>4.7/5</strong></span
+                      >
+
+                      <span class="px-2 py-1 rounded-pill text-bg-success">
+                        Giá: 1.990.000₫
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 4 -->
+              <a href="./single-course.html" class="list-group-item">
+                <div class="row align-items-center">
+                  <div class="col-md-4 col-12">
+                    <div>
+                      <img
+                        src="./img/H80F 4mp Multi2k.jpg"
+                        alt=""
+                        class="rounded img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <h5>Camera Wi-Fi Ezviz H80F</h5>
+                    <p class="text-secondary">
+                      EZVIZ H80F (4MP+4MP+4MP) trang bị hệ thống 3 ống kính 2K
+                      sắc nét, zoom quang 12X rõ chi tiết. Camera tích hợp AI
+                      nhận diện người & phương tiện, hỗ trợ màu ban đêm 24/7,
+                      đàm thoại hai chiều và chuẩn chống nước IP67 bền bỉ ngoài
+                      trời.
+                    </p>
+                    <div class="d-inline-flex align-items-center">
+                      <span
+                        class="px-2 py-1 rounded-pill text-bg-warning me-2 d-inline-flex align-items-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 640 640"
+                          width="16"
+                          height="16"
+                          class="me-1"
+                        >
+                          <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                          <path
+                            fill="rgb(255, 212, 59)"
+                            d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+                          />
+                        </svg>
+                        Đánh giá: <strong>4.7/5</strong></span
+                      >
+
+                      <span class="px-2 py-1 rounded-pill text-bg-success">
+                        Giá: 1.990.000₫
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 5 -->
+              <a href="./single-course.html" class="list-group-item">
+                <div class="row align-items-center">
+                  <div class="col-md-4 col-12">
+                    <div>
+                      <img
+                        src="./img/H80F 4mp Multi2k.jpg"
+                        alt=""
+                        class="rounded img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <h5>Camera Wi-Fi Ezviz H80F</h5>
+                    <p class="text-secondary">
+                      EZVIZ H80F (4MP+4MP+4MP) trang bị hệ thống 3 ống kính 2K
+                      sắc nét, zoom quang 12X rõ chi tiết. Camera tích hợp AI
+                      nhận diện người & phương tiện, hỗ trợ màu ban đêm 24/7,
+                      đàm thoại hai chiều và chuẩn chống nước IP67 bền bỉ ngoài
+                      trời.
+                    </p>
+                    <div class="d-inline-flex align-items-center">
+                      <span
+                        class="px-2 py-1 rounded-pill text-bg-warning me-2 d-inline-flex align-items-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 640 640"
+                          width="16"
+                          height="16"
+                          class="me-1"
+                        >
+                          <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                          <path
+                            fill="rgb(255, 212, 59)"
+                            d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+                          />
+                        </svg>
+                        Đánh giá: <strong>4.7/5</strong></span
+                      >
+
+                      <span class="px-2 py-1 rounded-pill text-bg-success">
+                        Giá: 1.990.000₫
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VI. -->
+
+    <!-- JS Boot Trap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- main JS -->
+    <script src="./main.js"></script>
+  </body>
+</html>
