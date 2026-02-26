@@ -231,3 +231,75 @@ body {
   font-size: 14px;
   margin-bottom: 10px;
 }
+
+/* <!-- V. Products viewed --> */
+.subcribe {
+  position: relative;
+  background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    url("./img/subcribe6.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Input đẹp hơn */
+.input-custom {
+  max-width: 350px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Button chuẩn bán hàng */
+.btn-custom {
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00c853, #00e676);
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 255, 150, 0.4);
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 150, 0.6);
+}
+
+.form-box button {
+  padding: 14px 22px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  color: white;
+
+  background: linear-gradient(90deg, #00e5ff, #ff3d00);
+
+  box-shadow: 0 5px 20px rgba(255, 61, 0, 0.4);
+  transition: 0.3s;
+}
+.form-box button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 61, 0, 0.6);
+}
+.form-box input {
+  width: 320px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.9);
+}
+.form-box input:focus {
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+}
+.title {
+  font-size: 32px;
+  font-weight: 700;
+}
+.sale {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ff5252;
+}
